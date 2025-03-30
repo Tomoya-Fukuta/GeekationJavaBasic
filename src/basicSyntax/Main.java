@@ -6,7 +6,8 @@ public class Main {
 		// メソッド呼び出し
 		DataType(); // データ型
 		Variables(); // 変数
-		Calculation(); // 四則演算
+		Calculation(); // 四則演算と計算処理
+		ComparisonLogicalOperators(); // 比較演算子と論理演算子
 	}
 	
 	/**************************************************
@@ -63,7 +64,7 @@ public class Main {
 		System.out.println(age + "\n");
 		
 		// String型にint型を連結すると自動的に文字列として扱われる
-		System.out.println(name + "の年齢は" + age + "\n");
+		System.out.println(name + "の年齢は" + age + "歳です" + "\n");
 	}
 
 	/**************************************************
@@ -133,6 +134,78 @@ public class Main {
 		double doubleNum = 0.5;
 		System.out.println(intNum + doubleNum); // double型にキャスト：値（3.5）が表示される
 		System.out.println(intNum + (int)doubleNum + "\n"); // int型にキャスト：値（3）が表示される
+	}
+	
+	public static void ComparisonLogicalOperators() {
+		// 比較演算子
+		int x = 5;
+		int y = 10;
+		int z = 5;
 		
+		// ==：比較対象と等しければtrue、異なればfalse
+		boolean isEqualA = (x == y);
+		boolean isEqualB = (x == z);
+		System.out.println(isEqualA); // false
+		System.out.println(isEqualB); // true
+		
+		// !=：比較対象と異なればtrue、等しければfalse　※さっきとは逆！
+		boolean isNotEqualA = (x != y);
+		boolean isNotEqualB = (x != z);
+		System.out.println(isNotEqualA); // true
+		System.out.println(isNotEqualB); // false
+		
+		// >：比較対象より値が大きい場合true、同じか小い場合false
+		boolean isGreaterA = (x > y);
+		boolean isGreaterB = (y > x);
+		boolean isGreaterC = (x > z);
+		System.out.println(isGreaterA); // false
+		System.out.println(isGreaterB); // true
+		System.out.println(isGreaterC); // false
+		
+		// <：比較対象より値が小い場合true、同じか大きい場合false
+		boolean isLessA = (x < y);
+		boolean isLessB = (y < x);
+		boolean isLessC = (x < z);
+		System.out.println(isLessA); // true
+		System.out.println(isLessB); // false
+		System.out.println(isLessC); // false
+		
+		// >=：比較対象と同じか大きい場合true、小さい場合false
+		boolean isGreaterOrEqualA = (x >= y);
+		boolean isGreaterOrEqualB = (y >= x);
+		boolean isGreaterOrEqualC = (x >= z);
+		System.out.println(isGreaterOrEqualA); // false
+		System.out.println(isGreaterOrEqualB); // true
+		System.out.println(isGreaterOrEqualC); // true
+		
+		// <=：比較対象と同じか小さい場合true、大きい場合false
+		boolean isLessOrEqualA = (x <= y);
+		boolean isLessOrEqualB = (y <= x);
+		boolean isLessOrEqualC = (x <= z);
+		System.out.println(isLessOrEqualA); // true
+		System.out.println(isLessOrEqualB); // false
+		System.out.println(isLessOrEqualC); // true
+		
+		// 論理演算子
+		int a = 5;
+		int b = 10;
+		
+		// 論理積（&&）：どちらの条件も満たしていた場合true
+		boolean andResultA = (a < 6 && b > 9); // true && true = true
+		boolean andResultB = (a < 6 && b < 10); // true && false = false
+		System.out.println(andResultA); // true
+		System.out.println(andResultB); // false
+		
+		// 論理和（||）：どちらかの条件を満たしていればtrue
+		boolean orResultA = (a < 6 || b < 10); // true || false = true
+		boolean orResultB = (a < 5 || b < 10); // false || flase = false
+		System.out.println(orResultA); // true
+		System.out.println(orResultB); // false
+		
+		// 論理否定（!）：条件の結果を反転させる（trueならばfalseになる）
+		boolean noResultA = !(a == b); // !(true) = false
+		boolean noResultB = !(a != b); // !(false) = true
+		System.out.println(noResultA); // false
+		System.out.println(noResultB); // true
 	}
 }
