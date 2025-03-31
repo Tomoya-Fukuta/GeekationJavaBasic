@@ -22,7 +22,7 @@ public class ForWhile {
 			}
 		}
 
-		System.out.println("～～～～～　お題１：パターン２　～～～～～");
+		System.out.println();
 		
 		int index = 0;
 		String[] pgLang = {"Ruby", "Golang", "Java", "Python", "TypeScript", "HTML", "JavaScript"};
