@@ -7,6 +7,7 @@ public class Main {
 		Calculation(); // 四則演算と計算処理
 		ComparisonLogicalOperators(); // 比較演算子と論理演算子
 		IfSwitch(); // 条件分岐
+		ForWhile(); // 繰り返し処理
 	}
 	
 	/**************************************************
@@ -285,6 +286,75 @@ public class Main {
 			
 		default:
 			System.out.println("その他の曜日");
+		}
+	}
+	
+	/**************************************************
+	 * 繰り返し処理
+	 **************************************************/
+	public static void ForWhile() {
+		// １：初期値を設定
+		int num = 1;
+		
+		// ２：繰り返しの条件を定義
+		while(num <= 100) {
+			// ３：繰り返す処理を実行
+			System.out.println(num);
+			
+			num++; // 無限ループにならないようnumを加算
+		}
+		
+		// 上記のwhile文と同じ処理をfor文で実行
+		for(int i = 1; i <= 100; i++) {
+			System.out.println(i);
+		}
+		
+		// 整数型の配列を宣言して初期化
+		// 長さが5の整数型の配列を作成。格納されている要素の値は全て0
+		int[] numbers_1 = new int[5];
+		
+		// 配列の宣言と同時に初期値を設定する
+		int[] numbers_2 = {10, 20, 30, 40, 50};
+		System.out.println(numbers_2[0]); // 配列要素の1番目にアクセス
+		System.out.println(numbers_2[2]); // 配列要素の3番目にアクセス
+		
+		// 文字列型の配列を作成
+		String[] fruits = {"りんご", "バナナ", "オレンジ"};
+		System.out.println(fruits[0]); // 配列要素の1番目にアクセス
+		// System.out.println(fruits[3]);  存在しない要素へのアクセスはエラーになる
+
+		// 要素の上書き
+		System.out.println(fruits[1]); // 出力結果：バナナ
+		fruits[1] = "ぶどう";
+		System.out.println(fruits[1]); // 出力結果：ぶどう
+		// ※存在しないindex、型の異なる値をいれるとエラーになる
+		
+		// 配列の長さ（要素数）はlengthプロパティを使用して取得可能
+		System.out.println(fruits.length); // 出力結果：3
+		// ※要素の追加、削除は配列型では難しい
+		
+		// 拡張for文
+		for(String fruit: fruits) {
+			System.out.println(fruit); // fruitにはfruitsの要素がindex順に入る
+		}
+		
+		// breakとcontinue
+		int[] counts = new int[10];
+		for(int i = 0; i <= 100; i++) {
+			if(i >= 10) {
+				break; // iの値が10より大きくなったらfor文を抜ける
+			}
+			
+			counts[i] = i + 1;
+		}
+		
+		for(int count: counts) {
+			if((count % 3) == 0) {
+				System.out.println("アホになって" + count + "と言う");
+				continue; // ココより下のfor文の中身を処理せず次のループへスキップする
+			}
+			
+			System.out.println("普通に" + count + "と言う");
 		}
 	}
 }
