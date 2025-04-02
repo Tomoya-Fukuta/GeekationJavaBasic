@@ -8,6 +8,9 @@ public class Main {
 		ComparisonLogicalOperators(); // 比較演算子と論理演算子
 		IfSwitch(); // 条件分岐
 		ForWhile(); // 繰り返し処理
+		
+		StandardPackage.listAndArrayList();
+		StandardPackage.stringBuilderExample();
 	}
 	
 	/**************************************************
