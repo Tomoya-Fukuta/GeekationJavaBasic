@@ -3,6 +3,12 @@ import java.util.List;
 
 public class StandardPackage {
 	
+	public static void allMethodColl() {
+		// クラス内のメソッド一括呼び出し
+		listAndArrayList();
+		stringBuilderExample();
+	}
+	
 	public static void listAndArrayList() {
 		// List型とArrayList型
 		List<String> arrayList = new ArrayList<String>();
