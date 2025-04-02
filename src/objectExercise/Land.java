@@ -14,7 +14,7 @@ public class Land extends Property {
 		}
 
 		/**************************************************
-		 * コンストラクタ
+		 * コンソール出力
 		 **************************************************/
 		public void output() {
 			Property.output(this.buildName, this.ownerName, this.buildType, this.buildPrice);
