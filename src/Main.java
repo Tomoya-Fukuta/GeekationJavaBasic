@@ -9,8 +9,8 @@ public class Main {
 		IfSwitch(); // 条件分岐
 		ForWhile(); // 繰り返し処理
 		
-		StandardPackage.listAndArrayList();
-		StandardPackage.stringBuilderExample();
+		// クラスメソッド呼び出し
+		StandardPackage.allMethodColl();
 	}
 	
 	/**************************************************
